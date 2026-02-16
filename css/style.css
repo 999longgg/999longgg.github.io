@@ -1182,6 +1182,27 @@ body[data-mode="dark"] .home-article-info .icon {
 .read-more-btn:hover {
   color: var(--theme-color);
 }
+@media (min-width: 900px) {
+  .home-article-cover {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 33%;
+    height: 100%;
+    border-radius: 0;
+  }
+  .home-article-cover img {
+    position: static;
+    transform: none;
+  }
+  .home-article-content[cover=''] {
+    margin-left: 33%;
+  }
+  .home-article-info {
+    max-width: 65%;
+  }
+}
 @media (max-width: 900px) {
   #home-content {
     flex-direction: column;
