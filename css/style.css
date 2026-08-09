@@ -4221,3 +4221,47 @@ body[data-mode="dark"] .timeline .timeline-icon:before {
   font-size: 1.35em;
   margin: 1.3em;
 }
+.comment {
+  margin-top: 3.5rem;
+}
+@media (max-width: 900px) {
+  .comment {
+    margin-top: 3em;
+  }
+}
+:root {
+  --waline-theme-color: #ffb347 !important;
+  --waline-active-color: #ffd191 !important;
+  --waline-badge-color: #ffb347 !important;
+}
+:root body[data-mode='dark'] {
+  --waline-bg-color: rgba(45,45,45,0.7) !important;
+  --waline-color: #bebec6 !important;
+  --waline-theme-color: #88c0ed !important;
+  --waline-active-color: #b8d9f4 !important;
+  --waline-badge-color: #88c0ed !important;
+  --waline-info-color: #808090;
+  --waline-info-bg-color: #373737;
+}
+@media (max-width: 900px) {
+  :root {
+    --waline-font-size: 15px !important;
+  }
+}
+div[data-waline] p {
+  margin: 0;
+}
+.wl-header label,
+.wl-header input {
+  font-size: 0.85em !important;
+}
+.wl-card .wl-head .wl-nick {
+  color: #737373;
+}
+.wl-card .wl-badge {
+  line-height: 1.5;
+  margin-inline-end: 0.5em;
+}
+body[data-mode='dark'] .wl-card .wl-head .wl-nick {
+  color: #9595a2;
+}
