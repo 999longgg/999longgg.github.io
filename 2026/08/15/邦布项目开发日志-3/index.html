@@ -1,0 +1,176 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="999longgg"/><meta name="copyright" content="999longgg"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="开发日志"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="邦布项目开发日志 - 3 | 999longgg's Blog"/><meta name="apple-mobile-web-app-title" content="邦布项目开发日志 - 3 | 999longgg's Blog"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://999longgg.top/2026/08/15/邦布项目开发日志-3/"/><meta name="description" content="前言前几天去当科技夏令营的指导老师，就没有接着做项目了，不过这段时间也正好等快递到货。 今天把板子焊接好了，然后发现了不少问题，这一篇就说一下这些问题。   DRC是吃干饭的先看一下我主控层的PCB：  我居然一直没有发现，我把一个排针放在了ESP32的背面，直到今天焊接的时候才发现。被自己震惊了好一会后，决定先将错就错，把排针焊上去后露出来的引脚剪掉，再把ESP焊上去。这个DRC检查完全没...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="邦布项目开发日志 - 3 | 999longgg&#39;s Blog">
+<meta property="og:url" content="https://999longgg.top/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/index.html">
+<meta property="og:site_name" content="999longgg&#39;s Blog">
+<meta property="og:description" content="前言前几天去当科技夏令营的指导老师，就没有接着做项目了，不过这段时间也正好等快递到货。 今天把板子焊接好了，然后发现了不少问题，这一篇就说一下这些问题。   DRC是吃干饭的先看一下我主控层的PCB：  我居然一直没有发现，我把一个排针放在了ESP32的背面，直到今天焊接的时候才发现。被自己震惊了好一会后，决定先将错就错，把排针焊上去后露出来的引脚剪掉，再把ESP焊上去。这个DRC检查完全没...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://999longgg.top/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/assets/images/%E5%B0%81%E9%9D%A2%E5%9B%BE/%E9%82%A6%E5%B8%83.png">
+<meta property="article:published_time" content="2026-08-15T12:01:56.000Z">
+<meta property="article:modified_time" content="2026-08-15T12:29:59.041Z">
+<meta property="article:author" content="999longgg">
+<meta property="article:tag" content="开发日志">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://999longgg.top/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/assets/images/%E5%B0%81%E9%9D%A2%E5%9B%BE/%E9%82%A6%E5%B8%83.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>邦布项目开发日志 - 3 | 999longgg's Blog</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/third-party/dist/waline.css">
+
+<link rel="stylesheet" href="/css/third-party/dist/APlayer.min.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 8.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>999longgg's Blog</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="search-btn"><a href="javascript:void(0);" title="搜索" accesskey="s"><img src="/assets/images/svg/uc/uc-search.svg" class="icon noview" alt="Icon"><span>搜索</span></a></div><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">999longgg's Blog</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 Ciallo～(∠・ω&lt; )⌒★ 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">邦布项目开发日志 - 3</h1><div class="post-author"><span>作者: 999longgg</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2026-08-15</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2026-08-15</span></div></div><div class="post-read"></div></div><div class="post-attribute"><div class="post-tags"><img src="/assets/images/svg/ta/ta-tag.svg" class="icon noview" alt="Icon"><span><a class="post-tags-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" rel="tag">开发日志</a></span></div></div></div><div class="post markdown" indent="false"><img  class="postcover" alt="Post Cover"  lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/assets/images/%E5%B0%81%E9%9D%A2%E5%9B%BE/%E9%82%A6%E5%B8%83.png" ><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>前几天去当科技夏令营的指导老师，就没有接着做项目了，不过这段时间也正好等快递到货。</p>
+<p>今天把板子焊接好了，然后发现了不少问题，这一篇就说一下这些问题。</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/IMG_20260815_194335.jpg"  alt="IMG_20260815_194335"></p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/IMG_20260815_194222.jpg"  alt="IMG_20260815_194222"></p>
+<h2 id="DRC是吃干饭的"><a href="#DRC是吃干饭的" class="headerlink" title="DRC是吃干饭的"></a>DRC是吃干饭的</h2><p>先看一下我主控层的PCB：</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/%E9%82%A6%E5%B8%83-%E4%B8%BB%E6%8E%A7%E5%B1%82-%E9%A1%B6%E5%B1%82PCB.png"  alt="邦布-主控层-顶层PCB"></p>
+<p>我居然一直没有发现，我把一个排针放在了ESP32的背面，直到今天焊接的时候才发现。被自己震惊了好一会后，决定先将错就错，把排针焊上去后露出来的引脚剪掉，再把ESP焊上去。这个DRC检查完全没有发现问题，真没想到能发生这种愚蠢的错误。</p>
+<h2 id="DS老师毁了我的板子"><a href="#DS老师毁了我的板子" class="headerlink" title="DS老师毁了我的板子"></a>DS老师毁了我的板子</h2><p>我找了很久的CH340K和ESP32的接线原理图，但死活找不到，所以想说找之前的老师要一下看看有没有，但是一直没回我消息，我就索性问DeepSeek怎么接线了。</p>
+<p>于是DS老师告诉我：</p>
+<blockquote>
+<h3 id="三极管自动下载电路"><a href="#三极管自动下载电路" class="headerlink" title="三极管自动下载电路"></a>三极管自动下载电路</h3><p>这个电路的核心是 <strong>两个 NPN 三极管</strong>（如 S8050 或 DDC114TU-7-F），它们像两个电子开关，根据 CH340K 的指令自动操作。</p>
+<p><strong>电路连接如下：</strong></p>
+<ul>
+<li><strong>Q1 三极管 (控制 EN)</strong><ul>
+<li><strong>基极 (B)</strong>：通过一个电阻（如 1kΩ）连接 CH340K 的 <strong>RTS</strong>。</li>
+<li><strong>集电极 (C)</strong>：连接 ESP32 的 <strong>EN</strong> 引脚。</li>
+<li><strong>发射极 (E)</strong>：接地 (<code>GND</code>)。</li>
+</ul>
+</li>
+<li><strong>Q2 三极管 (控制 IO0)</strong><ul>
+<li><strong>基极 (B)</strong>：通过一个电阻（如 1kΩ）连接 CH340K 的 <strong>DTR</strong>。</li>
+<li><strong>集电极 (C)</strong>：连接 ESP32 的 <strong>IO0</strong> 引脚。</li>
+<li><strong>发射极 (E)</strong>：接地 (<code>GND</code>)。</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><strong>关键</strong>：<code>EN</code> 和 <code>IO0</code> 引脚在 ESP32 内部都有上拉电阻，默认是高电平。两个三极管的作用就是<strong>根据需要，将这些引脚短暂地拉到低电平 (GND)</strong>。</p>
+</blockquote>
+</blockquote>
+<p>然后我就照着这个画了原理图，于是就有了如下的电路：</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/CH340K.png"  alt="CH340K"></p>
+<p>两个三极管发射极直接接地了，我当时想的是CH340给高电平直接拉低对应引脚，然后就这么画了PCB。</p>
+<p>事实上，在我整个原理图差不多快画完的时候，老师给我回消息了，发了我一个原理图，然而，当时我快累爆了，寻思这个应该差不多，所以就扫了一眼就没看了。</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/CH340%E6%8E%A5%E7%BA%BF%E5%9B%BE.png"  alt="CH340接线图"></p>
+<p>然后今天晚上尝试上传代码，理所当然的报错了。。。</p>
+<p><img   lazyload src="/assets/images/Meow-Loading.webp" data-lazy-src="/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/%E6%8A%A5%E9%94%99.png"  alt="报错"></p>
+<h2 id="最没含金量的错误"><a href="#最没含金量的错误" class="headerlink" title="最没含金量的错误"></a>最没含金量的错误</h2><p>是的，这个小小的板子还有别的问题，但是这些已经无关紧要了。</p>
+<p>一个就是我tm忘记买MOS管了，导致供电切换用不了，只能用Type-C供电。</p>
+<p>还有一个就是那个开关的商家连续两次发错货，卧式的开关给我发了两次直插，只能暂时先用立式，结果开关在两层板中间巨难打开。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>总之，以上是邦布项目主控板的一些问题，因为CH340接线的重大失误，这块板已经不得不重新设计打样了。</p>
+<p>在新板子到货之前就做一下建模吧。</p>
+</div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div><div class="post-reward-list"><a href="/null" target="_blank">致谢名单</a></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 999longgg 于 2026-08-15 20:01:56 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://999longgg.top/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/">邦布项目开发日志 - 3</a></span><button class="copy-text" type="button" data-text="https://999longgg.top/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>999longgg's Blog</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"><a class="post-tail-tags-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" rel="tag">开发日志</a></div><div class="post-nav"><a class="post-nav-prev" nopost=""></a><a class="post-nav-next" href="/2026/08/13/%E5%A4%8F%E4%BB%A4%E8%90%A5%E7%9A%84%E5%91%8A%E4%B8%80%E6%AE%B5%E8%90%BD/" title="夏令营的告一段落">下一篇<span>夏令营的告一段落</span></a></div><div class="comment"><div id="waline"></div></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-list-text">前言</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#DRC%E6%98%AF%E5%90%83%E5%B9%B2%E9%A5%AD%E7%9A%84"><span class="toc-list-text">DRC是吃干饭的</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#DS%E8%80%81%E5%B8%88%E6%AF%81%E4%BA%86%E6%88%91%E7%9A%84%E6%9D%BF%E5%AD%90"><span class="toc-list-text">DS老师毁了我的板子</span></a><ol class="toc-list-child"><li class="toc-list-item toc-list-level-3"><a class="toc-list-link" href="#%E4%B8%89%E6%9E%81%E7%AE%A1%E8%87%AA%E5%8A%A8%E4%B8%8B%E8%BD%BD%E7%94%B5%E8%B7%AF"><span class="toc-list-text">三极管自动下载电路</span></a></li></ol></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E6%9C%80%E6%B2%A1%E5%90%AB%E9%87%91%E9%87%8F%E7%9A%84%E9%94%99%E8%AF%AF"><span class="toc-list-text">最没含金量的错误</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-list-text">结语</span></a></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://999longgg.top/2026/08/15/%E9%82%A6%E5%B8%83%E9%A1%B9%E7%9B%AE%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97-3/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div><div class="search-overlay"><div class="search-container"><div class="search-header"><div class="search-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+搜索</div><div class="search-close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" /><path d="M9 8l6 8" /><path d="M15 8l-6 8" /></svg></div></div><div class="search-input-box"><input id="search-input" type="search" placeholder="请输入关键词进行站内搜索……" value="" maxlength="80"/></div><div class="search-result-container"><div class="search-result-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></div></div></div></div><div id="music-player"></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2026 <span>💗</span> <a href="/null">999longgg</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.3.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  album: '',
+  codeblock: true,
+  code_copy_text: false,
+  share_text: '🐱Share From Meow',
+  onblur_title: '九龙のBlog',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: true,
+    path: '',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline',
+      serverURL: 'https://comment.999longgg.top',
+      lang: 'zh-CN',
+      dark: 'body[data-mode="dark"]',
+      emoji: null,
+      reaction: null,
+    }, null))
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      let jsPath = ''
+      if (false) {
+        jsPath = 'dist/waline.js'
+      } else {
+        jsPath = '/js/plugins/dist/waline.js'
+      }
+      const { init } = await import(jsPath)
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if (true) {
+    meow.lazyloadFn(document.getElementById('waline'), loadWaline)
+  } else {
+    loadWaline()
+  }
+})()</script>
+<script src="/js/plugins/dist/APlayer.min.js"></script>
+<script>const initAplayer = (data) => {
+  if (!data.length) return;
+
+  const ap = new APlayer({
+    container: document.getElementById('music-player'),
+    fixed: true,
+    autoplay: false,
+    theme: '#FFB347',
+    loop: 'all',
+    order: 'list',
+    volume: 0.7,
+    lrcType: 3,
+    audio: data
+  });
+
+  ap.on('play', () => {
+    document.getElementById('music-player').setAttribute("play", "");
+  });
+  ap.on('pause', () => {
+    document.getElementById('music-player').removeAttribute("play");
+  });
+};
+
+const fetchData = () => {
+  fetch('')
+    .then(res => res.json())
+    .then(result => initAplayer(result));
+};
+
+if ('') {
+  document.addEventListener("DOMContentLoaded", fetchData);
+} else {
+  document.addEventListener("DOMContentLoaded", initAplayer());;
+}</script>
+<script src="/js/plugins/dist/search.js"></script>
+
+<script src="/js/main.js" type="module"></script>
+</div></body></html>
