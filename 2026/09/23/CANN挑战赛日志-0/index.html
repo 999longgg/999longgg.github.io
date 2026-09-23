@@ -1,0 +1,153 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta name="author" content="999longgg"/><meta name="copyright" content="999longgg"/><meta name="theme-color" content="#FFB347"/><meta name="format-detection" content="telephone=no"/><meta name="keywords" content="开发日志"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-capable" content="yes"/><meta name="apple-touch-fullscreen" content="yes"/><meta name="application-name" content="CANN挑战赛日志 - 0 | 999longgg's Blog"/><meta name="apple-mobile-web-app-title" content="CANN挑战赛日志 - 0 | 999longgg's Blog"/><meta name="apple-mobile-web-app-status-bar-style" content="#FFB347"/><link rel="canonical" href="https://999longgg.top/2026/09/23/CANN挑战赛日志-0/"/><meta name="description" content="前言上周导员在群里发了CANN挑战赛的讲座通知，我就了解了一下这个比赛，打算参加一手。 看了一下官网，这个是华为发布的设计NPU算法的比赛，打赢了前途大大的有，但打赢不太可能，毕竟这些东西真的完全不懂。 初窥门径官方gitcode页面提供了入门教程，简单浏览了一下快速开始。 这个还只是介绍一下NPU、算子之类的是什么，其中提供了一些用于演示的PyTorch代码，但没能成功在浏览器上演示部署的...">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CANN挑战赛日志 - 0 | 999longgg&#39;s Blog">
+<meta property="og:url" content="https://999longgg.top/2026/09/23/CANN%E6%8C%91%E6%88%98%E8%B5%9B%E6%97%A5%E5%BF%97-0/index.html">
+<meta property="og:site_name" content="999longgg&#39;s Blog">
+<meta property="og:description" content="前言上周导员在群里发了CANN挑战赛的讲座通知，我就了解了一下这个比赛，打算参加一手。 看了一下官网，这个是华为发布的设计NPU算法的比赛，打赢了前途大大的有，但打赢不太可能，毕竟这些东西真的完全不懂。 初窥门径官方gitcode页面提供了入门教程，简单浏览了一下快速开始。 这个还只是介绍一下NPU、算子之类的是什么，其中提供了一些用于演示的PyTorch代码，但没能成功在浏览器上演示部署的...">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://999longgg.top/2026/09/23/CANN%E6%8C%91%E6%88%98%E8%B5%9B%E6%97%A5%E5%BF%97-0/assets/images/Hexo-Theme-MEOW.png">
+<meta property="article:published_time" content="2026-09-23T15:53:34.000Z">
+<meta property="article:modified_time" content="2026-09-23T16:28:47.542Z">
+<meta property="article:author" content="999longgg">
+<meta property="article:tag" content="开发日志">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://999longgg.top/2026/09/23/CANN%E6%8C%91%E6%88%98%E8%B5%9B%E6%97%A5%E5%BF%97-0/assets/images/Hexo-Theme-MEOW.png"><meta name="robots" content="index,follow"/><meta name="googlebot" content="index,follow"/><meta name="revisit-after" content="1 days"/><title>CANN挑战赛日志 - 0 | 999longgg's Blog</title><link rel="shortcut icon" href="/assets/images/Hexo-Theme-MEOW.ico"><link rel="preconnect" href="/assets"/><link rel="preconnect" href="assets"/>
+<link rel="stylesheet" href="/css/style.css">
+
+<link rel="stylesheet" href="/css/third-party/dist/waline.css">
+
+<link rel="stylesheet" href="/css/third-party/dist/APlayer.min.css">
+<link rel="prefetch" href="/"/><link rel="prefetch" href="/archives"/><link rel="prefetch" href="/tags"/><meta name="generator" content="Hexo 8.1.1"></head><body bg-style="none"><header><div id="navbar"><div id="nav-info"><a id="site-icon" href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a id="site-name" href="/" title="主页"><div>999longgg's Blog</div><img src="/assets/images/svg/uc/uc-home.svg" class="icon noview" alt="Icon"></a></div><div id="nav-menu"></div><div id="nav-function"><div id="search-btn"><a href="javascript:void(0);" title="搜索" accesskey="s"><img src="/assets/images/svg/uc/uc-search.svg" class="icon noview" alt="Icon"><span>搜索</span></a></div><div id="menu-btn"><a href="javascript:void(0);" title="打开菜单"><img src="/assets/images/svg/uc/uc-menu.svg" class="icon noview" alt="Icon"></a></div></div></div></header><div id="menu-aside"><div id="menu-aside-container"><div id="menu-aside-info"><a href="/" title="主页"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></a><a href="/" title="主页">999longgg's Blog</a></div><hr/></div></div><main><div class="banner"><div class="banner-info"><div class="banner-avatar"><img src="/assets/images/Hexo-Theme-MEOW.png" alt="Avatar"/></div><div class="banner-title">「 Ciallo～(∠・ω&lt; )⌒★ 」</div></div></div><div class="post-container"><div class="post-main"><div class="post-content"><h1 class="post-title">CANN挑战赛日志 - 0</h1><div class="post-author"><span>作者: 999longgg</span></div><div class="post-meta"><div class="post-info"><div class="post-date"><div class="post-pubdate"><img src="/assets/images/svg/ta/ta-pubdate.svg" class="icon noview" alt="Icon"><span>发表于2026-09-23</span></div><div class="post-update"><img src="/assets/images/svg/ta/ta-update.svg" class="icon noview" alt="Icon"><span>更新于2026-09-24</span></div></div><div class="post-read"><div class="post-pageview"><img src="/assets/images/svg/ta/ta-fire.svg" class="icon noview" alt="Icon"><span>访问量: </span><span id="vercount_value_page_pv"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6l0 -3" /><path d="M16.25 7.75l2.15 -2.15" /><path d="M18 12l3 0" /><path d="M16.25 16.25l2.15 2.15" /><path d="M12 18l0 3" /><path d="M7.75 16.25l-2.15 2.15" /><path d="M6 12l-3 0" /><path d="M7.75 7.75l-2.15 -2.15" /></svg></span></div></div></div><div class="post-attribute"><div class="post-tags"><img src="/assets/images/svg/ta/ta-tag.svg" class="icon noview" alt="Icon"><span><a class="post-tags-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" rel="tag">开发日志</a></span></div></div></div><div class="post markdown" indent="false"><h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上周导员在群里发了CANN挑战赛的讲座通知，我就了解了一下这个比赛，打算参加一手。</p>
+<p>看了一下官网，这个是华为发布的设计NPU算法的比赛，打赢了前途大大的有，但打赢不太可能，毕竟这些东西真的完全不懂。</p>
+<h2 id="初窥门径"><a href="#初窥门径" class="headerlink" title="初窥门径"></a>初窥门径</h2><p><a target="_blank" rel="noopener" href="https://competition.gitcode.com/competition/2094721134930419714/intro">官方gitcode页面</a>提供了<a target="_blank" rel="noopener" href="https://gitcode.com/cann/cann-learning-hub">入门教程</a>，简单浏览了一下快速开始。</p>
+<p>这个还只是介绍一下NPU、算子之类的是什么，其中提供了一些用于演示的PyTorch代码，但没能成功在浏览器上演示部署的Notebook上成功运行。</p>
+<p>关于Notebook的使用待后续学习。</p>
+<h2 id="速通Python"><a href="#速通Python" class="headerlink" title="速通Python"></a>速通Python</h2><p>下午，ACM程序设计的课上，我交了两三题之后就去找Python课程看去了。</p>
+<p>找到了一个三小时<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Jgf6YvE8e/?spm_id_from=333.788.videopod.episodes&vd_source=2c9616e9a285bba94b747d893cabca87">速通Python</a>的课，开1.5倍速看了一半，大概熟悉了python的基础语法。</p>
+<p>后面还需要学习PyTorch。</p>
+<h2 id="竞赛专题讲座"><a href="#竞赛专题讲座" class="headerlink" title="竞赛专题讲座"></a>竞赛专题讲座</h2><p>这个讲座似乎要求了每个信息学院和计算机学院的人到场，他们都穿着院服。不过这个讲座本身是对所有人公开的，所以也有像我一样主动来参加的人。</p>
+<p>讲座分两个阶段，一个是科普AI和NPU，一个是竞赛的细则。</p>
+<p>科普没什么好说的，抽奖也没抽到我。</p>
+<p>竞赛细则主要说明了代码提交方法，也稍微说了一下题目的内容，但是题目的内容确实很超纲，基本上听不懂在说什么，唯一听明白的就是优化的目的就是平衡计算核心的调度，减少数据搬运对时间的浪费，提高计算效率。不过对于我这种菜逼，最核心的问题应该是怎么看懂题目和怎么写一份能跑的代码。</p>
+<h2 id="组一辈子赛队"><a href="#组一辈子赛队" class="headerlink" title="组一辈子赛队"></a>组一辈子赛队</h2><p>这个比赛在群里发了之后，我就和林俊翔说了，他发现允许跨校组队，浙江和福建也正好在同一个赛区，于是决定强强联合。</p>
+<p>晚上讲座期间也在拍ppt给他，同时总结讲座内容。</p>
+<p>讲座结束后，我们认为可以再拉一人，遂决定问问老锦。可惜他现在当班长了，时间不充裕，没办法花时间学比赛内容。于是我又去问了吴梓锋，前面掰扯了一些，他最后答应了组队参赛。</p>
+<p>于是我们三人强强强联合。</p>
+<p>回寝室洗完澡后，和他们二人确定了队名：Null。</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>初赛截止时间是10月17日，只剩二十多天，留给我们学习的时间很短，必须把握一切时间。</p>
+<p>也因此本系列日志将尽可能简短。</p>
+</div><div class="post-reward"><div class="post-reward-btn" title="赞赏作者"><img src="/assets/images/svg/uc/uc-gift.svg" class="icon noview" alt="Icon"><span></span></div><div class="post-reward-content"><div class="post-reward-text"></div></div></div><div class="post-copyright"><div class="post-copyright-info">本作品由 999longgg 于 2026-09-23 23:53:34 发布</div><div class="post-copyright-link"><span>作品地址：<a href="https://999longgg.top/2026/09/23/CANN%E6%8C%91%E6%88%98%E8%B5%9B%E6%97%A5%E5%BF%97-0/">CANN挑战赛日志 - 0</a></span><button class="copy-text" type="button" data-text="https://999longgg.top/2026/09/23/CANN%E6%8C%91%E6%88%98%E8%B5%9B%E6%97%A5%E5%BF%97-0/">复制</button></div><div class="post-copyright-detail">除特别声明外，本站作品均采用 <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' title='Attribution-NonCommercial-ShareAlike' target='_blank'>CC BY-NC-SA 4.0</a> 许可协议，转载请注明来自 <a href='/'>999longgg's Blog</a></div><img class="post-copyright-icon noview" src="/assets/images/Hexo-Theme-MEOW.png" alt="Logo"/></div><div class="post-tail-tags"><a class="post-tail-tags-link" href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" rel="tag">开发日志</a></div><div class="post-nav"><a class="post-nav-prev" nopost=""></a><a class="post-nav-next" href="/2026/09/19/%E6%9D%AD%E5%B8%88%E5%A4%A7%E6%A0%A1%E5%9B%AD%E6%97%A5%E8%AE%B0-%E9%9D%A2%E8%AF%95/" title="杭师大校园杂谈 - 仓前面试记">下一篇<span>杭师大校园杂谈 - 仓前面试记</span></a></div><div class="comment"><div id="waline"></div></div></div><aside id="post-sidebar" status="show"><div id="toc-container"><div class="toc-title"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"><span>目录</span></div><div class="toc-content" id="toc-div"><ol class="toc-list"><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%89%8D%E8%A8%80"><span class="toc-list-text">前言</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E5%88%9D%E7%AA%A5%E9%97%A8%E5%BE%84"><span class="toc-list-text">初窥门径</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E9%80%9F%E9%80%9APython"><span class="toc-list-text">速通Python</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%AB%9E%E8%B5%9B%E4%B8%93%E9%A2%98%E8%AE%B2%E5%BA%A7"><span class="toc-list-text">竞赛专题讲座</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%BB%84%E4%B8%80%E8%BE%88%E5%AD%90%E8%B5%9B%E9%98%9F"><span class="toc-list-text">组一辈子赛队</span></a></li><li class="toc-list-item toc-list-level-2"><a class="toc-list-link" href="#%E7%BB%93%E8%AF%AD"><span class="toc-list-text">结语</span></a></li></ol></div></div></aside></div></div><div id="toolbar" hide=""><div id="toolbar-setting-container" hide=""><div class="toolbar-item"><button id="tool-color-mode" title="深色模式" type="button"><img src="/assets/images/svg/ta/ta-moon.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button class="copy-text" id="tool-share" title="分享" type="button" data-text="https://999longgg.top/2026/09/23/CANN%E6%8C%91%E6%88%98%E8%B5%9B%E6%97%A5%E5%BF%97-0/"><img src="/assets/images/svg/ta/ta-share.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-plus" title="放大字体" type="button"><img src="/assets/images/svg/ta/ta-text-plus.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-font-size-minus" title="缩小字体" type="button"><img src="/assets/images/svg/ta/ta-text-minus.svg" class="icon noview" alt="Icon"></button></div></div><div class="toolbar-container"><div class="toolbar-item"><button id="tool-setting" title="设置" type="button"><img src="/assets/images/svg/ta/ta-setting.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-toc" title="目录" type="button"><img src="/assets/images/svg/ta/ta-toc.svg" class="icon noview" alt="Icon"></button></div><div class="toolbar-item"><button id="tool-gototop" title="返回顶部" type="button"><img src="/assets/images/svg/ta/ta-up.svg" class="icon noview" alt="Icon"></button></div></div></div><div class="search-overlay"><div class="search-container"><div class="search-header"><div class="search-title"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>
+搜索</div><div class="search-close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 21a9 9 0 0 0 9 -9a9 9 0 0 0 -9 -9a9 9 0 0 0 -9 9a9 9 0 0 0 9 9z" /><path d="M9 8l6 8" /><path d="M15 8l-6 8" /></svg></div></div><div class="search-input-box"><input id="search-input" type="search" placeholder="请输入关键词进行站内搜索……" value="" maxlength="80"/></div><div class="search-result-container"><div class="search-result-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></div></div></div></div><div id="music-player"></div></main><footer><div class="footer"><div id="footer-copyright">© 2024 - 2026 <span>💗</span> <a target="_blank" rel="noopener" href="https://github.com/999longgg/999longgg.github.io">999longgg</a></div><div id="footer-info"><div id="footer-framework">🚀本站由 <a href="https://hexo.io" target="_blank">Hexo</a> & <a href="https://github.com/chanwj/hexo-theme-meow" title="3.3.0" target="_blank">Meow</a> 强力驱动</div><div id="footer-runtime"><span id="runtime" data-startdate="2024-04-02T22:16:20.000Z">🌻已稳定运行.年.月.天</span></div></div><div id="footer-pageview"><div id="container_site_pv"><span>🔥总访问量</span><span id="vercount_value_site_pv"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6l0 -3" /><path d="M16.25 7.75l2.15 -2.15" /><path d="M18 12l3 0" /><path d="M16.25 16.25l2.15 2.15" /><path d="M12 18l0 3" /><path d="M7.75 16.25l-2.15 2.15" /><path d="M6 12l-3 0" /><path d="M7.75 7.75l-2.15 -2.15" /></svg></span></div><div id="container_site_uv"><span>🐈访客人数</span><span id="vercount_value_site_uv"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 6l0 -3" /><path d="M16.25 7.75l2.15 -2.15" /><path d="M18 12l3 0" /><path d="M16.25 16.25l2.15 2.15" /><path d="M12 18l0 3" /><path d="M7.75 16.25l-2.15 2.15" /><path d="M6 12l-3 0" /><path d="M7.75 7.75l-2.15 -2.15" /></svg></span></div></div></div></footer><div class="scripts"><script>const GLOBALCONFIG = {
+  root: '/',
+  toolbar: true,
+  lazyload_src: '/assets/images/Meow-Loading.webp',
+  friends: false,
+  album: '',
+  codeblock: true,
+  code_copy_text: false,
+  share_text: '分享自999longgg.top',
+  onblur_title: '九龙のBlog',
+  mouse_click: false,
+  notify:{
+    enable: false,
+    info: '复制成功～转载请标注本文地址',
+    f12_info: '开发者模式已打开，请遵循本站版权协议'
+  },
+  search: {
+    enable: true,
+    path: '',
+    local: {
+      top_n_per_article: 1,
+      preload: false
+    }
+  },
+  encrypt: false,
+};
+</script><script>if (!localStorage.getItem('color-mode')) {
+  localStorage.setItem('color-mode', 'light' || 'light');
+}
+document.body.setAttribute('data-mode', localStorage.getItem('color-mode'));
+</script>
+<script src="/js/theme/tools/utils.js"></script>
+
+<script src="/js/plugins/dist/lazyload.min.js"></script>
+
+<script src="/js/plugins/view-image.min.js"></script>
+<script src="https://events.vercount.one/js" defer="defer"></script><script>if (localStorage.getItem('font-size')) {
+  document.querySelector('.post').style.fontSize = localStorage.getItem('font-size') + 'px';
+}
+</script><script>(() => {
+  let initFn = window.walineFn || null
+
+  const initWaline = (Fn) => {
+    const waline = Fn(Object.assign({
+      el: '#waline',
+      serverURL: 'https://comment.999longgg.top',
+      lang: 'zh-CN',
+      dark: 'body[data-mode="dark"]',
+      emoji: null,
+      reaction: null,
+    }, null))
+  }
+
+  const loadWaline = async () => {
+    if (initFn) initWaline(initFn)
+    else {
+      let jsPath = ''
+      if (false) {
+        jsPath = 'dist/waline.js'
+      } else {
+        jsPath = '/js/plugins/dist/waline.js'
+      }
+      const { init } = await import(jsPath)
+      initFn = init || Waline.init
+      initWaline(initFn)
+      window.walineFn = initFn
+    }
+  }
+
+  if (true) {
+    meow.lazyloadFn(document.getElementById('waline'), loadWaline)
+  } else {
+    loadWaline()
+  }
+})()</script>
+<script src="/js/plugins/dist/APlayer.min.js"></script>
+<script>const initAplayer = (data) => {
+  if (!data.length) return;
+
+  const ap = new APlayer({
+    container: document.getElementById('music-player'),
+    fixed: true,
+    autoplay: false,
+    theme: '#FFB347',
+    loop: 'all',
+    order: 'list',
+    volume: 0.7,
+    lrcType: 3,
+    audio: data
+  });
+
+  ap.on('play', () => {
+    document.getElementById('music-player').setAttribute("play", "");
+  });
+  ap.on('pause', () => {
+    document.getElementById('music-player').removeAttribute("play");
+  });
+};
+
+const fetchData = () => {
+  fetch('')
+    .then(res => res.json())
+    .then(result => initAplayer(result));
+};
+
+if ('') {
+  document.addEventListener("DOMContentLoaded", fetchData);
+} else {
+  document.addEventListener("DOMContentLoaded", initAplayer());;
+}</script>
+<script src="/js/plugins/dist/search.js"></script>
+
+<script src="/js/main.js" type="module"></script>
+</div></body></html>
