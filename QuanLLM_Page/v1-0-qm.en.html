@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuanLLM-v1.0-qm | Quantum Mechanics Exam Prep &amp; Q&amp;A Expert</title>
+    <meta name="description" content="QuanLLM-v1.0-qm is a major field-branch release of QuanLLM for quantum mechanics, built on Qwen3-8B with visible thinking, streaming output, SymPy symbolic computation, and a no-install CLI client for Windows, macOS, and Linux.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-branch">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.en.html" class="logo">
+                <span class="logo-icon">⚛️</span>
+                <span class="logo-text">QuanLLM</span>
+                <span class="logo-branch">v1.0-qm</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.en.html">QuanLLM Home</a></li>
+                <li><a href="v1-0-qm.en.html">QuanLLM-v1.0-qm</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#cli">Client</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <li><a href="v1-0-qm.html" class="lang-switcher" aria-label="切换到中文"><span>中</span><span class="sep">/</span><span class="current">EN</span></a></li>
+                <li><a href="https://github.com/lct-unv/quanllm-cli/releases" target="_blank" class="nav-cta">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero hero-branch" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                QuanLLM Field Branch · Major Release
+            </div>
+            <h1 class="hero-title">
+                QuanLLM-v1.0-qm
+                <span class="gradient-text">A Quantum Mechanics Expert That Thinks and Computes</span>
+            </h1>
+            <p class="hero-subtitle">
+                <strong>QuanLLM-v1.0-qm</strong> is a major upgrade of the QuanLLM field branch for quantum mechanics teaching and application. Now built on <strong>Qwen3-8B</strong>, it adds a visible thinking mode, streaming output, and SymPy symbolic computation: the model plans the derivation, SymPy guarantees the math. Ships with a no-install CLI client for Windows, macOS, and Linux.
+            </p>
+            <div class="hero-actions">
+                <a href="#apply" class="btn btn-primary">Apply for API Key</a>
+                <a href="#features" class="btn btn-secondary">Explore Capabilities</a>
+            </div>
+
+            <p class="hero-subtitle" style="margin-top: 16px; font-size: 0.95rem; opacity: 0.8;">
+                How to apply: send an email to <strong>activity@quanllm.com</strong> following the fixed template below.
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">8B</div>
+                    <div class="stat-label">Parameters</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Qwen3</div>
+                    <div class="stat-label">Base Model</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">CLI</div>
+                    <div class="stat-label">3-Platform Client</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">50</div>
+                    <div class="stat-label">First-Batch Keys</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <section class="branch-banner">
+        <div class="container">
+            <div class="branch-card">
+                <div class="branch-badge">FIELD BRANCH · MAJOR RELEASE</div>
+                <h2>Quantum Mechanics · An Expert That Thinks and Computes</h2>
+                <p>v0.2-qm made the model available anywhere; v1.0-qm makes it accurate and transparent. The model understands the problem and plans the derivation, while SymPy handles symbolic computation exactly. The full thinking chain is visible, and the self-adapting three-platform client works out of the box with no development environment required.</p>
+                <div class="branch-meta">
+                    <span><strong>Mainline:</strong> QuanLLM</span>
+                    <span><strong>Version:</strong> v1.0 (0815)</span>
+                    <span><strong>Direction:</strong> Quantum Mechanics Teaching &amp; Application</span>
+                    <span><strong>Status:</strong> Released · Limited Beta</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About v1.0-qm</span>
+                <h2>From Assistant to an Expert That Shows Its Work</h2>
+                <p>v0.2-qm moved the model to the cloud. v1.0-qm fixes the two remaining weaknesses of a language model in physics teaching: the accuracy of symbolic math and the transparency of reasoning. Computation is done by the SymPy engine, exact down to the expression itself; thinking mode lets the model reason first and answer second, so students see how a problem is approached and teachers can check where it goes right or wrong.</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>Exam-Oriented</h3>
+                    <p>Targets high-frequency final exam topics: concept explanation, formula derivation, calculation problems, and proof questions.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💬</div>
+                    <h3>General Q&amp;A</h3>
+                    <p>Not limited to exam questions; also explains concepts, compares representations, and discusses physical pictures and common misconceptions.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🧠</div>
+                    <h3>Thinking Mode · Streaming</h3>
+                    <p>Reason first, answer second, with the full chain of thought visible. Both thinking and answers stream token by token—no more waiting on a blank screen.</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🧮</div>
+                    <h3>Exact SymPy Computation</h3>
+                    <p>Differentiation, integration, and equation solving are delegated to the symbolic engine, exact to the expression, with multi-round tool calls in a single conversation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Features</span>
+                <h2>What v1.0-qm Can Do</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card large">
+                    <div class="feature-content">
+                        <h3>Concept Explanation</h3>
+                        <p>Explains core concepts such as wave functions, the uncertainty principle, representation transformations, identical particles, spin, and entanglement in clear language.</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="chat-bubble user">What is a Hermitian operator?</div>
+                        <div class="chat-bubble assistant">A Hermitian operator satisfies A† = A, has real eigenvalues, and corresponds to physical observables...</div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>Formula Derivation</h3>
+                    <p>Step-by-step derivations of the Schrödinger equation, ladder operators, angular momentum commutation relations, perturbation theory, and more.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Exercise Solving</h3>
+                    <p>Problem-solving strategies and step-by-step solutions for harmonic oscillators, hydrogen atoms, perturbation theory, and scattering—with SymPy guaranteeing every computation.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>General Quantum Q&amp;A</h3>
+                    <p>Answers open-ended quantum mechanics questions, including physical pictures, comparisons of theoretical frameworks, and connections to frontiers.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Three-Platform CLI Client</h3>
+                    <p>No-install client for Windows, macOS, and Linux, with multi-turn conversation and session history save &amp; restore. Ready out of the box.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="api-info" id="cli">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Self-Adapting Client</span>
+                <h2>Three-Platform CLI, Ready Out of the Box</h2>
+                <p>Every v1.0-qm API Key ships with a self-adapting command-line client. No key is embedded in the program—an APIKEY template file is generated on first run. Streaming, visible thinking, and SymPy tool calls are all preserved. Only 50 API Keys are available in the first batch.</p>
+                <p style="margin-top: 12px;"><strong>To download the release for your platform (Windows / macOS / Linux), just click the GitHub button in the top-right corner.</strong></p>
+                <div style="margin-top: 16px;">
+                    <span class="limited-badge">🔒 Limited to 50 First-Batch API Keys</span>
+                </div>
+            </div>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="terminal-title">v1.0-qm Client Information</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-grid">
+                        <div class="terminal-row">
+                            <span class="terminal-label">💻 platforms</span>
+                            <span class="terminal-value highlight">Windows / macOS / Linux (no install, unzip and run)</span>
+                        </div>
+                        <div class="terminal-row">
+                            <span class="terminal-label">🔑 api_key</span>
+                            <span class="terminal-value highlight">Read from the APIKEY file next to the program; no key embedded</span>
+                        </div>
+                        <div class="terminal-row">
+                            <span class="terminal-label">🏗️ base_model</span>
+                            <span class="terminal-value">Qwen3-8B</span>
+                        </div>
+                        <div class="terminal-row">
+                            <span class="terminal-label">⚡ features</span>
+                            <span class="terminal-value">Thinking mode · Streaming · SymPy tool calls</span>
+                        </div>
+                    </div>
+
+                    <div class="terminal-pricing">
+                        <div class="terminal-price">
+                            <div class="terminal-price-icon">📥</div>
+                            <div class="terminal-price-content">
+                                <div class="terminal-price-label">Input Cost</div>
+                                <div class="terminal-price-value">0.6 <span class="terminal-price-unit">CNY / million tokens</span></div>
+                            </div>
+                        </div>
+                        <div class="terminal-price">
+                            <div class="terminal-price-icon">📤</div>
+                            <div class="terminal-price-content">
+                                <div class="terminal-price-label">Output Cost</div>
+                                <div class="terminal-price-value">6 <span class="terminal-price-unit">CNY / million tokens (thinking + answer)</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="terminal-code">
+                        <div class="terminal-code-header">
+                            <div class="terminal-code-label">
+                                <span>💻</span>
+                                <span>Quick Start</span>
+                            </div>
+                            <span class="terminal-code-lang">bash</span>
+                        </div>
+                        <div class="terminal-code-content"># 1. Unzip, rename APIKEY.example to APIKEY, and paste your key
+
+# 2. Launch the client
+./quanllm-cli          # macOS / Linux
+quanllm-cli.exe        # double-click on Windows
+
+# 3. Session commands
+:sessions      list all saved sessions
+:load 2        restore a specific session
+:clear         start a fresh session
+:quit          exit</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Apply for API Key</span>
+                <h2>How to Apply for a v1.0-qm API Key</h2>
+                <p>Only 50 spots are available in the first batch. Please send an email using the fixed template below. We will reply with the API Key, the three-platform client packages, and usage instructions after review.</p>
+            </div>
+
+            <div class="apply-card">
+                <div class="mail-window">
+                    <div class="mail-window-header">
+                        <div class="mail-window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="mail-window-title">New Email - Apply for QuanLLM-v1.0-qm API Key</span>
+                    </div>
+                    <div class="mail-window-body">
+                        <div class="mail-compose-field">
+                            <span class="mail-compose-label">To</span>
+                            <span class="mail-compose-value"><a href="mailto:activity@quanllm.com?subject=Application for QuanLLM-v1.0-qm API Key">activity@quanllm.com</a></span>
+                        </div>
+                        <div class="mail-compose-field">
+                            <span class="mail-compose-label">Subject</span>
+                            <span class="mail-compose-value">Application for QuanLLM-v1.0-qm API Key</span>
+                        </div>
+                        <div class="mail-compose-field">
+                            <span class="mail-compose-label">Cc</span>
+                            <span class="mail-compose-value" style="color: var(--text-subtle);">—</span>
+                        </div>
+
+                        <div class="mail-template-box">
+                            <div class="mail-template-header">
+                                <div class="mail-template-label">
+                                    <span>📝</span>
+                                    <span>Fixed Email Body Template</span>
+                                </div>
+                                <span class="mail-template-tag">Copy-ready</span>
+                            </div>
+                            <div class="mail-template-content"><span class="field-name">Full Name: </span><span class="field-hint">[Your real name]</span>
+<span class="field-name">Contact Email: </span><span class="field-hint">[Your frequently used email address]</span>
+<span class="field-name">Purpose: </span><span class="field-hint">[Briefly describe why you need the API Key, e.g., quantum mechanics exam review, teaching assistance, research exploration]</span>
+<span class="field-name">Usage Scenario: </span><span class="field-hint">[Personal learning / Classroom teaching / Research project / Other]</span>
+<span class="field-name">Institution/School: </span><span class="field-hint">[Your school or organization]</span>
+<span class="field-name">Role: </span><span class="field-hint">[Student / Teacher / Researcher / Developer / Other]</span>
+<span class="field-name">Expected Call Frequency: </span><span class="field-hint">[e.g., fewer than 50 calls per day / weekly testing / unsure]</span>
+<span class="field-name">Willing to Provide Feedback: </span><span class="field-hint">[Yes / No]</span>
+
+<hr class="field-divider">
+
+I promise that the API Key will only be used for the stated purpose, will not be shared with others, will not be used for commercial purposes, and I will comply with QuanLLM's usage policies.
+
+<span class="field-name">Applicant Signature: </span><span class="field-hint">[Your Name]</span>
+<span class="field-name">Application Date: </span><span class="field-hint">[YYYY-MM-DD]</span></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="apply-note">⚠️ Please make sure all fields above are filled out completely. Missing key information may delay the review process. Please do not send duplicate applications from the same email address or applicant.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Live Demo</span>
+                <h2>Experience QuanLLM-v1.0-qm</h2>
+                <p>The current demo is static. Full conversational functionality requires an API Key, after which you can chat through the three-platform client.</p>
+            </div>
+            <div class="demo-card">
+                <div class="demo-header">
+                    <div class="demo-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="demo-title">QuanLLM-v1.0-qm Chat</span>
+                </div>
+                <div class="demo-chat">
+                    <div class="demo-message user">
+                        <span class="demo-avatar">👤</span>
+                        <div class="demo-bubble">Explain the energy level formula for a 1D infinite potential well.</div>
+                    </div>
+                    <div class="demo-message assistant">
+                        <span class="demo-avatar">⚛️</span>
+                        <div class="demo-bubble">
+                            <p>For a 1D infinite potential well of width <em>a</em>, solving the time-independent Schrödinger equation gives:</p>
+                            <p class="formula">E<sub>n</sub> = (n²π²ℏ²)/(2ma²),  n = 1, 2, 3, ...</p>
+                            <p>Key points:</p>
+                            <ul>
+                                <li>Energy is quantized, not continuous.</li>
+                                <li>The ground-state energy is non-zero (zero-point energy).</li>
+                                <li>Energy scales inversely with <em>a²</em>: the narrower the well, the higher the energy.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-input">
+                    <input type="text" placeholder="Ask a quantum mechanics question..." disabled>
+                    <button disabled>Send</button>
+                </div>
+            </div>
+            <div class="demo-note">
+                <p>💡 <strong>Tip:</strong> Apply for an API Key to start conversing with the model through the three-platform client. Please follow the <a href="#apply">application template</a> and send an email to activity@quanllm.com. This page is for product demonstration only.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-card cta-card-branch">
+                <h2>Apply for a First-Batch API Key</h2>
+                <p>v1.0-qm is opening 50 API Keys in its first batch. Approved applicants receive the three-platform client, ready out of the box. Feedback from students, teachers, and researchers is welcome.</p>
+                <div class="cta-actions">
+                    <a href="#apply" class="btn btn-primary btn-large">View Application Template</a>
+                    <a href="index.en.html" class="btn btn-secondary btn-large">Back to QuanLLM Home</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.en.html" class="logo">
+                        <span class="logo-icon">⚛️</span>
+                        <span class="logo-text">QuanLLM</span>
+                        <span class="logo-branch">v1.0-qm</span>
+                    </a>
+                    <p>Quantum Mechanics Exam Prep &amp; Q&amp;A Branch</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="index.en.html">QuanLLM Home</a></li>
+                            <li><a href="v1-0-qm.en.html">v1.0-qm</a></li>
+                            <li><a href="index.en.html#roadmap">Roadmap</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="https://github.com/lct-unv/quanllm-cli/" target="_blank">GitHub</a></li>
+                            <li><a href="#cli">Client</a></li>
+                            <li><a href="#demo">Demo</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 QuanLLM Project. Founded By MeaWorm Corp.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuanLLM-v1.0-qm | 量子力学期末备考与问答专家模型</title>
+    <meta name="description" content="QuanLLM-v1.0-qm 是 QuanLLM 主产品的量子力学领域大版本升级，基于 Qwen3-8B，支持思考模式、流式输出与 SymPy 符号计算，随附三平台免安装客户端。">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="page-branch">
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <span class="logo-icon">⚛️</span>
+                <span class="logo-text">QuanLLM</span>
+                <span class="logo-branch">v1.0-qm</span>
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="菜单">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">QuanLLM 主页</a></li>
+                <li><a href="v1-0-qm.html">QuanLLM-v1.0-qm</a></li>
+                <li><a href="#features">特性</a></li>
+                <li><a href="#cli">客户端</a></li>
+                <li><a href="#demo">演示</a></li>
+                <li><a href="v1-0-qm.en.html" class="lang-switcher" aria-label="Switch to English"><span class="current">中</span><span class="sep">/</span><span>EN</span></a></li>
+                <li><a href="https://github.com/lct-unv/quanllm-cli/releases" target="_blank" class="nav-cta">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero hero-branch" id="hero">
+        <div class="hero-bg">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                QuanLLM 领域支线版 · 大版本升级
+            </div>
+            <h1 class="hero-title">
+                QuanLLM-v1.0-qm
+                <span class="gradient-text">会想、会算的量子力学专家</span>
+            </h1>
+            <p class="hero-subtitle">
+                <strong>QuanLLM-v1.0-qm</strong> 是 QuanLLM 主产品在量子力学教学与应用方向上的大版本升级。基座切换为 <strong>Qwen3-8B</strong>，新增思考模式与流式输出，并接入 SymPy 符号计算工具：想的过程交给模型，算的过程交给 SymPy。随附 Windows / macOS / Linux 三平台免安装客户端，开盒即用。
+            </p>
+            <div class="hero-actions">
+                <a href="#apply" class="btn btn-primary">申请 API Key</a>
+                <a href="#features" class="btn btn-secondary">了解能力</a>
+            </div>
+            <p class="hero-subtitle" style="margin-top: 16px; font-size: 0.95rem; opacity: 0.8;">
+                申请方式：发送邮件至 <strong>activity@quanllm.com</strong>，正文按固定模板填写。
+            </p>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-value">8B</div>
+                    <div class="stat-label">模型参数</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">Qwen3</div>
+                    <div class="stat-label">基座模型</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">CLI</div>
+                    <div class="stat-label">三平台客户端</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-value">50</div>
+                    <div class="stat-label">首批 Key 名额</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <section class="branch-banner">
+        <div class="container">
+            <div class="branch-card">
+                <div class="branch-badge">FIELD BRANCH · MAJOR RELEASE</div>
+                <h2>量子力学 · 会想会算的教学专家</h2>
+                <p>v0.2-qm 解决了"随时可用"，v1.0-qm 解决"算得准、想得清"：模型负责理解题意、规划推导，符号计算交给 SymPy 精确完成，思考过程全程可见。配合自适配三平台客户端，无需任何开发环境即可开始对话。</p>
+                <div class="branch-meta">
+                    <span><strong>所属主线：</strong> QuanLLM</span>
+                    <span><strong>版本：</strong> v1.0 (0815)</span>
+                    <span><strong>方向：</strong> 量子力学教学与应用</span>
+                    <span><strong>状态：</strong> 已发布 · 限量公测</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">关于 v1.0-qm</span>
+                <h2>从量子力学助手到会想会算的教学专家</h2>
+                <p>v0.2-qm 把模型搬上了云端，v1.0-qm 则补上了最关键的两块短板：符号计算的准确性与推理过程的透明度。符号计算由 SymPy 引擎完成，精确到表达式本身；思考模式让模型"先想后答"，学生能看到这题是怎么想的，老师能检查它有没有想偏。</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card">
+                    <div class="about-icon">🎯</div>
+                    <h3>备考导向</h3>
+                    <p>针对期末考试高频考点：概念解释、公式推导、计算题、证明题，提供结构化回答。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">💬</div>
+                    <h3>通用问答</h3>
+                    <p>不仅限于考题，也能解释量子力学概念、对比不同表象、讨论物理图像与常见误区。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🧠</div>
+                    <h3>思考模式 · 流式输出</h3>
+                    <p>先想后答，推理链条对用户可见；思考与回答逐字流式输出，长推导不用干等。</p>
+                </div>
+                <div class="about-card">
+                    <div class="about-icon">🧮</div>
+                    <h3>SymPy 精确计算</h3>
+                    <p>求导、积分、解方程交给符号引擎，结果精确到表达式本身，支持一次对话中多轮调用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">产品特性</span>
+                <h2>v1.0-qm 能做什么</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card large">
+                    <div class="feature-content">
+                        <h3>概念解释</h3>
+                        <p>用清晰的中文解释波函数、测不准原理、表象变换、全同粒子、自旋、纠缠等核心概念，帮助建立直觉。</p>
+                    </div>
+                    <div class="feature-visual">
+                        <div class="chat-bubble user">什么是厄米算符？</div>
+                        <div class="chat-bubble assistant">厄米算符满足 A† = A，本征值为实数，对应物理可观测量...</div>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <h3>公式推导</h3>
+                    <p>逐步展示薛定谔方程、升降算符、角动量对易关系、微扰论等关键推导过程。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>习题解答</h3>
+                    <p>针对谐振子、氢原子、微扰论、散射等典型期末考点给出解题思路与步骤，计算题由 SymPy 保证结果准确。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>通用量子问答</h3>
+                    <p>回答更开放的量子力学问题，如物理图像、不同理论框架比较、历史背景与前沿联系。</p>
+                </div>
+                <div class="feature-card">
+                    <h3>三平台 CLI 客户端</h3>
+                    <p>Windows / macOS / Linux 免安装客户端，多轮对话、历史会话保存与恢复，开箱即用。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="api-info" id="cli">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">自适配客户端</span>
+                <h2>三平台 CLI，开盒即用</h2>
+                <p>v1.0-qm 随 API Key 附赠自适配命令行客户端。密钥不落程序，首次运行自动生成 APIKEY 模板文件；流式输出、思考过程、SymPy 工具调用全部保留。首批仅开放 50 个 API Key 申请。</p>
+                <p style="margin-top: 12px;"><strong>各平台发行版（Windows / macOS / Linux）点击页面右上角的 GitHub 按钮即可下载。</strong></p>
+                <div style="margin-top: 16px;">
+                    <span class="limited-badge">🔒 首批限量 50 个 API Key</span>
+                </div>
+            </div>
+
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="terminal-title">v1.0-qm 客户端信息</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-grid">
+                        <div class="terminal-row">
+                            <span class="terminal-label">💻 platforms</span>
+                            <span class="terminal-value highlight">Windows / macOS / Linux（免安装，解压即用）</span>
+                        </div>
+                        <div class="terminal-row">
+                            <span class="terminal-label">🔑 api_key</span>
+                            <span class="terminal-value highlight">同目录 APIKEY 文件读取，程序内不含密钥</span>
+                        </div>
+                        <div class="terminal-row">
+                            <span class="terminal-label">🏗️ base_model</span>
+                            <span class="terminal-value">Qwen3-8B</span>
+                        </div>
+                        <div class="terminal-row">
+                            <span class="terminal-label">⚡ features</span>
+                            <span class="terminal-value">思考模式 · 流式输出 · SymPy 工具调用</span>
+                        </div>
+                    </div>
+
+                    <div class="terminal-pricing">
+                        <div class="terminal-price">
+                            <div class="terminal-price-icon">📥</div>
+                            <div class="terminal-price-content">
+                                <div class="terminal-price-label">输入费用</div>
+                                <div class="terminal-price-value">0.6 <span class="terminal-price-unit">元 / 百万 Token</span></div>
+                            </div>
+                        </div>
+                        <div class="terminal-price">
+                            <div class="terminal-price-icon">📤</div>
+                            <div class="terminal-price-content">
+                                <div class="terminal-price-label">输出费用</div>
+                                <div class="terminal-price-value">6 <span class="terminal-price-unit">元 / 百万 Token（思维链 + 回答）</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="terminal-code">
+                        <div class="terminal-code-header">
+                            <div class="terminal-code-label">
+                                <span>💻</span>
+                                <span>快速上手</span>
+                            </div>
+                            <span class="terminal-code-lang">bash</span>
+                        </div>
+                        <div class="terminal-code-content"># 1. 解压后将 APIKEY.example 重命名为 APIKEY，写入你的 Key
+
+# 2. 启动客户端
+./quanllm-cli          # macOS / Linux
+quanllm-cli.exe        # Windows 双击运行
+
+# 3. 对话指令
+:sessions      查看历史会话
+:load 2        恢复指定会话
+:clear         清空上下文
+:quit          退出</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="apply-section" id="apply">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">申请 API Key</span>
+                <h2>如何申请 v1.0-qm 首批 API Key</h2>
+                <p>首批仅开放 50 个名额。请按以下固定模板发送邮件，我们将在审核通过后回复 API Key、三平台客户端安装包与使用说明。</p>
+            </div>
+
+            <div class="apply-card">
+                <div class="mail-window">
+                    <div class="mail-window-header">
+                        <div class="mail-window-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <span class="mail-window-title">新建邮件 - 申请 QuanLLM-v1.0-qm API Key</span>
+                    </div>
+                    <div class="mail-window-body">
+                        <div class="mail-compose-field">
+                            <span class="mail-compose-label">收件人</span>
+                            <span class="mail-compose-value"><a href="mailto:activity@quanllm.com?subject=申请 QuanLLM-v1.0-qm API Key">activity@quanllm.com</a></span>
+                        </div>
+                        <div class="mail-compose-field">
+                            <span class="mail-compose-label">主题</span>
+                            <span class="mail-compose-value">申请 QuanLLM-v1.0-qm API Key</span>
+                        </div>
+                        <div class="mail-compose-field">
+                            <span class="mail-compose-label">抄送</span>
+                            <span class="mail-compose-value" style="color: var(--text-subtle);">—</span>
+                        </div>
+
+                        <div class="mail-template-box">
+                            <div class="mail-template-header">
+                                <div class="mail-template-label">
+                                    <span>📝</span>
+                                    <span>邮件正文固定模板</span>
+                                </div>
+                                <span class="mail-template-tag">可复制</span>
+                            </div>
+                            <div class="mail-template-content"><span class="field-name">申请人姓名：</span><span class="field-hint">[请填写您的真实姓名]</span>
+<span class="field-name">联系邮箱：</span><span class="field-hint">[请填写您常用的邮箱地址]</span>
+<span class="field-name">申请用途：</span><span class="field-hint">[请简述您申请 API Key 的用途，例如：量子力学期末复习、教学辅助、科研探索等]</span>
+<span class="field-name">使用场景：</span><span class="field-hint">[请说明是个人学习 / 课堂教学 / 科研项目 / 其他]</span>
+<span class="field-name">单位/学校：</span><span class="field-hint">[请填写您所在的学校或单位名称]</span>
+<span class="field-name">身份：</span><span class="field-hint">[学生 / 教师 / 研究者 / 开发者 / 其他]</span>
+<span class="field-name">预计调用频率：</span><span class="field-hint">[例如：每日 50 次以内 / 每周测试 / 不确定]</span>
+<span class="field-name">是否愿意反馈使用体验：</span><span class="field-hint">[是 / 否]</span>
+
+<hr class="field-divider">
+
+本人承诺：申请到的 API Key 仅用于上述用途，不对外转借、不用于商业目的，并遵守 QuanLLM 的使用规范。
+
+<span class="field-name">申请人签名：</span><span class="field-hint">[您的姓名]</span>
+<span class="field-name">申请日期：</span><span class="field-hint">[YYYY-MM-DD]</span></div>
+                        </div>
+                    </div>
+                </div>
+                <p class="apply-note">⚠️ 请确保邮件正文完整填写以上信息，缺失关键字段可能影响审核进度。同一邮箱/申请人请勿重复发送。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="demo" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">在线体验</span>
+                <h2>体验 QuanLLM-v1.0-qm</h2>
+                <p>当前 Demo 为静态展示。完整对话功能需申请 API Key 后通过三平台客户端访问。</p>
+            </div>
+            <div class="demo-card">
+                <div class="demo-header">
+                    <div class="demo-dots">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <span class="demo-title">QuanLLM-v1.0-qm Chat</span>
+                </div>
+                <div class="demo-chat">
+                    <div class="demo-message user">
+                        <span class="demo-avatar">👤</span>
+                        <div class="demo-bubble">解释一维无限深势阱中的能级公式。</div>
+                    </div>
+                    <div class="demo-message assistant">
+                        <span class="demo-avatar">⚛️</span>
+                        <div class="demo-bubble">
+                            <p>对于宽度为 <em>a</em> 的一维无限深势阱，定态薛定谔方程的解给出能级：</p>
+                            <p class="formula">E<sub>n</sub> = (n²π²ℏ²)/(2ma²),  n = 1, 2, 3, ...</p>
+                            <p>其中 <em>n</em> 是量子数，从 1 开始。关键点：</p>
+                            <ul>
+                                <li>能量量子化，不能连续取值</li>
+                                <li>基态能量不为零（零点能）</li>
+                                <li>能级与 <em>a²</em> 成反比，势阱越窄能量越高</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="demo-input">
+                    <input type="text" placeholder="输入量子力学问题..." disabled>
+                    <button disabled>发送</button>
+                </div>
+            </div>
+            <div class="demo-note">
+                <p>💡 <strong>提示：</strong>申请 API Key 后即可通过三平台客户端与模型对话。请按<a href="#apply">申请模板</a>发送邮件至 activity@quanllm.com。本页面仅作产品展示。</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <div class="cta-card cta-card-branch">
+                <h2>申请首批 API Key</h2>
+                <p>v1.0-qm 首批开放 50 个 API Key 申请，审核通过后即可获得三平台客户端，开盒即用。欢迎量子力学学习者、教师和研究者试用反馈。</p>
+                <div class="cta-actions">
+                    <a href="#apply" class="btn btn-primary btn-large">查看申请模板</a>
+                    <a href="index.html" class="btn btn-secondary btn-large">返回 QuanLLM 主页</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <span class="logo-icon">⚛️</span>
+                        <span class="logo-text">QuanLLM</span>
+                        <span class="logo-branch">v1.0-qm</span>
+                    </a>
+                    <p>Quantum Mechanics Exam Prep &amp; Q&amp;A Branch</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>导航</h4>
+                        <ul>
+                            <li><a href="index.html">QuanLLM 主页</a></li>
+                            <li><a href="v1-0-qm.html">v1.0-qm</a></li>
+                            <li><a href="index.html#roadmap">路线图</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>资源</h4>
+                        <ul>
+                            <li><a href="https://github.com/lct-unv/quanllm-cli/" target="_blank">GitHub</a></li>
+                            <li><a href="#cli">客户端</a></li>
+                            <li><a href="#demo">演示</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 QuanLLM Project. Founded By MeaWorm Corp.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
