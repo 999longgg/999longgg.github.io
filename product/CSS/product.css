@@ -1,0 +1,223 @@
+/* ==========================================================================
+   QMStudy 产品详情页 · 页面级样式
+   product.html / product.en.html 共用
+   --------------------------------------------------------------------------
+   加载顺序：styles.css（主页共享样式）→ theme.css（主题令牌）→ 本文件
+   本文件只包含主页样式表没有覆盖的部分：
+     1. Hero 标题换行（规避 .hero-title 的 text-wrap: balance）
+     2. #ai 区块标题单行
+     3. 工作台 5 列入口布局
+     4. 入口路径胶囊
+     5. 课程表 / 凭据表（主页样式表没有任何 table 规则）
+     6. 附录行的多行专题列表
+     7. 八阶段流水线标签
+   颜色全部取自主题令牌（--surface-*、--border、--text-muted、--radius、--shadow），
+   因此暗色 / 浅色主题自动适配。
+   ========================================================================== */
+
+/* ==========================================================================
+   1. Hero 标题
+   主页 .hero-title 使用 text-wrap: balance，会把中文标语从词中间断开；
+   这里让渐变色标语独占一行，并让渐变背景刚好贴合文字宽度。
+   ========================================================================== */
+.hero-branch .hero-title .gradient-text {
+    display: block;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   2. AI 与核验区块标题保持单行
+   主页 .section-header 限宽 720px，会把「答案不是直接给出来的，而是核验过的」
+   末尾的「的」字挤到第二行。本区块放宽到 960px，桌面端即可单行显示；
+   窄屏仍按容器宽度正常换行。
+   ========================================================================== */
+#ai .section-header {
+    max-width: 960px;
+}
+
+/* ==========================================================================
+   3. 工作台入口：宽屏一行 5 个
+   窄屏不生效，自动回落到 .about-grid 原有的响应式断点（4 / 2 / 1 列）。
+   ========================================================================== */
+@media (min-width: 1100px) {
+    .workbench-grid {
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    .workbench-grid .about-card {
+        padding: 28px 24px;
+    }
+}
+
+/* ==========================================================================
+   4. 入口路径胶囊（/、/selftest/、/strategy/graph …）
+   ========================================================================== */
+.entry-path {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 3px 12px;
+    border-radius: 100px;
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    color: var(--secondary);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.82rem;
+    letter-spacing: 0.01em;
+}
+
+/* ==========================================================================
+   5. 表格：课程表与凭据表
+   ========================================================================== */
+.qm-table-wrap {
+    overflow-x: auto;
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+.qm-table {
+    width: 100%;
+    min-width: 620px;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.qm-table caption {
+    padding: 20px 24px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.qm-table th,
+.qm-table td {
+    padding: 14px 24px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+}
+
+.qm-table thead th {
+    background: var(--surface-1);
+    color: var(--text);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+}
+
+.qm-table tbody tr {
+    transition: background 0.2s ease;
+}
+
+.qm-table tbody tr:hover {
+    background: var(--surface-1);
+}
+
+.qm-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.qm-table td:first-child {
+    color: var(--text);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* 英文课名较长（Lesson 2 · Wave–Particle Duality and Probability Waves），
+   允许换行，避免首列被撑得过宽 */
+html[lang="en"] .qm-table td:first-child {
+    white-space: normal;
+}
+
+.qm-table td:last-child {
+    color: var(--text-muted);
+}
+
+.qm-table tbody tr.is-milestone td:first-child {
+    color: var(--secondary);
+}
+
+.qm-table code {
+    padding: 2px 8px;
+    border-radius: var(--radius-sm);
+    background: var(--surface-2);
+    border: 1px solid var(--border);
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.85em;
+}
+
+.table-note {
+    margin-top: 16px;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6. 附录行的专题列表
+   附录行原本是一长串单行文本，会把「交互动画」这一列撑满、比例失衡；
+   改为多行列表后内容分成数行，整列宽度分配更协调。
+   ========================================================================== */
+.topic-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 8px 28px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.topic-list li {
+    position: relative;
+    padding-left: 16px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.topic-list li::before {
+    content: "";
+    position: absolute;
+    left: 2px;
+    top: 0.62em;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--secondary);
+    opacity: 0.75;
+}
+
+@media (max-width: 700px) {
+    .topic-list {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* ==========================================================================
+   7. 八阶段核验流水线标签
+   ========================================================================== */
+.pipeline {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8px;
+}
+
+.pipeline-step {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background: var(--surface-1);
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 0.88rem;
+}
+
+.pipeline-step span {
+    color: var(--secondary);
+    font-weight: 600;
+    font-size: 0.8rem;
+}
